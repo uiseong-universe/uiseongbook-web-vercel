@@ -12,79 +12,64 @@ import Image from "next/image"
 const sampleResidents = [
   {
     id: 1,
-    name: "김순자",
-    nickname: "마을의 어머니",
-    level: 73,
-    bloodType: "A",
-    favoriteSong: "고향의 봄",
-    mbti: "ESFJ",
-    story: "40년간 마을 이장을 맡으며 동네를 돌봐온 든든한 어머니",
-    address: "점곡면 중리",
-    zodiac: "황소자리",
-    image: "/elderly-korean-woman-smiling.png",
-    specialty: "김치 담그기",
-    hobby: "텃밭 가꾸기",
-  },
-  {
-    id: 2,
-    name: "박철수",
-    nickname: "마을 철학자",
-    level: 68,
-    bloodType: "B",
-    favoriteSong: "아침이슬",
-    mbti: "INFP",
-    story: "젊은 시절 서울에서 교사로 일하다 고향으로 돌아온 지혜로운 할아버지",
-    address: "점곡면 서리",
-    zodiac: "물병자리",
-    image: "/wise-korean-elder.png",
-    specialty: "한시 짓기",
-    hobby: "독서",
-  },
-  {
-    id: 3,
-    name: "이영희",
-    nickname: "꽃할머니",
-    level: 71,
-    bloodType: "O",
-    favoriteSong: "진달래꽃",
-    mbti: "ISFP",
-    story: "평생 꽃을 키우며 마을을 아름답게 가꿔온 예술가 할머니",
-    address: "점곡면 동리",
-    zodiac: "처녀자리",
-    image: "/placeholder-qtyg6.png",
-    specialty: "꽃꽂이",
-    hobby: "정원 가꾸기",
-  },
-  {
-    id: 4,
-    name: "최만수",
-    nickname: "마을 기술자",
-    level: 75,
-    bloodType: "AB",
-    favoriteSong: "남촌",
-    mbti: "ISTP",
-    story: "손재주가 뛰어나 마을의 모든 고장난 것들을 고쳐주는 만능 할아버지",
-    address: "점곡면 북리",
-    zodiac: "사자자리",
-    image: "/elderly-korean-man-fixing.png",
-    specialty: "목공예",
-    hobby: "라디오 수리",
-  },
-  {
-    id: 5,
     name: "김창회",
     nickname: "사촌마을의 마지막 선비",
-    level: 77,
-    bloodType: "O",
-    favoriteSong: "고향의 봄",
-    mbti: "INFJ",
+    level: 86,
+    bloodType: "O", // 온화하고 사교적인 면, 강의와 소통을 즐기는 모습에서 상상
+    favoriteSong: "고향의 봄", // 세대·성향에 맞춰 추정
+    mbti: "INFJ", // 이상주의자형, 깊이 있는 대화와 가치관 중심
     story: "유교문화권 정비사업을 사랑방에서 시작한 사촌마을의 '살아있는 역사'.",
     address: "경상북도 의성군 사촌마을",
-    zodiac: "황소자리",
+    zodiac: "황소자리", // 4~5월생 가정 → 우직하고 인내심 강한 성향
     image: "/wise-korean-scholar.png",
     specialty: "유교 문화 전수",
     hobby: "사랑방 운영",
   },
+  {
+    id: 2,
+    name: "김아이자",
+    nickname: "사촌마을의 억척 구멍가게 주인",
+    level: 77,
+    bloodType: "A", // 성실·책임감·봉사정신 반영
+    favoriteSong: "굳세어라 금순아", // 전쟁세대 공감대 있는 노래
+    mbti: "ISFJ", // 헌신적·가족과 공동체를 책임지는 성향
+    story: "52년 동안 구멍가게를 지키며 6남매를 키워낸 의성의 강인한 어머니.",
+    address: "경상북도 의성군 사촌마을",
+    zodiac: "염소자리", // 책임감과 인내의 상징
+    image: "elderly-korean-woman-smiling.png",
+    specialty: "가족 부양과 공동체 봉사",
+    hobby: "구멍가게 운영과 이웃 돌보기"
+  },
+  {
+    id: 3,
+    name: "황재윤",
+    nickname: "의성의 불굴 농부",
+    level: 58,
+    bloodType: "B", // 추진력·도전정신·끈기 반영
+    favoriteSong: "바위처럼", // 어려움을 극복하는 삶과 잘 맞는 노래
+    mbti: "ESTJ", // 책임감·리더십·실행력 중심
+    story: "쌀값 투쟁으로 ‘실명사건’의 주인공이 되었고, 사슴농장과 마을회관 건립으로 의성 공동체를 일으킨 젊은 농부.",
+    address: "경상북도 의성군 점곡면 송내리",
+    zodiac: "사자자리", // 강한 리더십과 도전 정신을 상징
+    image: "/star-hwang.png",
+    specialty: "사슴 사육·농민회 활동·지역 리더십",
+    hobby: "마을회관 운영, 지역 축구 경기 관람"
+  },
+  {
+    id: 4,
+    name: "박정기",
+    nickname: "전쟁터의 억척 장사꾼",
+    level: 80,
+    bloodType: "A", // 책임감 강하고 성실한 모습에서 추정
+    favoriteSong: "이별의 부산정거장", // 1950년대 대중가요 추정
+    mbti: "ESTJ", // 현실적이고 실행력 강한 성향
+    story: "6.25 전쟁 속 미군부대에서 물건을 받아 장사하며 가족의 생계를 책임진 강인한 여성.",
+    address: "경상북도 의성군",
+    zodiac: "게자리", // 6~7월생 가정 → 가족 중심적 성향 반영
+    image: "/doctor-park.png",
+    specialty: "장사 수완",
+    hobby: "동생들 돌보기"
+  }
 ]
 
 export default function DogamPage() {
